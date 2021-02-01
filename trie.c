@@ -102,6 +102,9 @@ void print_all(Node *root, char *word) {
 
 		// Print all the possible words starting from that node
 		print_all(root->children[i], new_word);
+
+		// Free the new word
+		free(new_word);
 	}
 }
 
