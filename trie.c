@@ -81,7 +81,7 @@ char *append(char* word, char character) {
 	return strdup(new_word);
 }
 
-// Prints all the possbile words from the given node
+// Prints all the possible words from the given node
 void print_all(Node *root, char *word) {
 	// If the node is already null
 	if (root == NULL) {
@@ -100,7 +100,7 @@ void print_all(Node *root, char *word) {
 		// Convert the child nodes index to a char and append it to the word
 		char *new_word = append(word, i + 'a');
 
-		// Print all the possbile words starting from that node
+		// Print all the possible words starting from that node
 		print_all(root->children[i], new_word);
 	}
 }
@@ -120,7 +120,7 @@ void print_matching(Node *root, char *word) {
 	}
 	// Else
 	else {
-		// Print all the possbile words from that node
+		// Print all the possible words from that node
 		print_all(root, word);
 	}
 }
