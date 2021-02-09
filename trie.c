@@ -89,14 +89,8 @@ void print_all(Node *root, char *word) {
 		return;
 	}
 
-	// If the node is the end of a word
-	if (root->end_of_word) {
-		// Print the word
-		printf("%s\n", word);
-	}
-
 	// Iterate over each child node
-	for (int i = 0; i < CHAR_SIZE; i++) {
+	for (int i = CHAR_SIZE - 1; i >= 0; i--) {
 		// Convert the child nodes index to a char and append it to the word
 		char *new_word = append(word, i + 'a');
 
@@ -105,6 +99,12 @@ void print_all(Node *root, char *word) {
 
 		// Free the new word
 		free(new_word);
+	}
+
+	// If the node is the end of a word
+	if (root->end_of_word) {
+		// Print the word
+		printf("%s\n", word);
 	}
 }
 
