@@ -78,7 +78,7 @@ int main() {
 		printf("Error while opening the dictionary file.\n");
 
 		// Exit
-		return 0;
+		return 1;
 	}
 
 	// Initialize the word string
@@ -142,5 +142,5 @@ int main() {
 	clear();
 
 	// Exit
-	return 1;
+	return 0;
 }
